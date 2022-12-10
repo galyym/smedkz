@@ -8,9 +8,10 @@ $redis->auth('');
 
 if ($redis->ping()) {
 	print_r("ping");
-    $redis->set("message", "Hello world");
-    $data = $redis->get("message");
+//    $redis->set("message", "Hello world");
+    $data = $redis->get("laravel_database_KZAS12010001");
 	$allKeys = $redis->keys('*');
+	print_r($data);
 	print_r($allKeys);
 }
 
