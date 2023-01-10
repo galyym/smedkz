@@ -27,6 +27,7 @@ Route::group(['prefix' => 'send', 'middleware' => 'check'], function (){
     Route::post("sendsql", [LocalController::class, 'index']);
     Route::post("cloud", [CloudController::class, "index"]);
     Route::post("add/user", [AddUserCloudController::class, "addUserCloud"]);
+    Route::post("add/admin", [AddUserCloudController::class, "addAdmin"]);
 });
 
 
